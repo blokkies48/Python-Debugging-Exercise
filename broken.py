@@ -22,9 +22,10 @@ def partition(numbers, first, last):
     while rightmark > leftmark: 
 
         # left has to be smaller than last can't go over list length
-        # Same for right
+        # Same for right but swapped.
         # This caused the original index error (The setup)
-        while leftmark < last and numbers[leftmark] < pivotvalue: # Remove =. 
+        # Remove = and change out rightmark, similar for rightmark
+        while leftmark < last and numbers[leftmark] < pivotvalue: 
             leftmark += 1 # Change to += 
 
         while rightmark > first and numbers[rightmark] >= pivotvalue: # Remove =
