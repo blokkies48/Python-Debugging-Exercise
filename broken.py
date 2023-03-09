@@ -37,10 +37,10 @@ def partition(numbers, first, last):
             numbers[leftmark] = numbers[rightmark]
             numbers[rightmark] = temp
 
-    if numbers[leftmark] > pivotvalue: # Need this if statement
-        temp = numbers[leftmark]
-        numbers[leftmark] = numbers[last]
-        numbers[last] = temp
+    # Need this if statement
+    temp = numbers[leftmark]
+    numbers[leftmark] = numbers[last]
+    numbers[last] = temp
 
     return leftmark # Need to return leftmark (new split point)
 
